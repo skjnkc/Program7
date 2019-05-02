@@ -25,8 +25,8 @@ void MovieStats(vector<int> a, string name, map<string, int> &restaurantRatings)
 
 int main() {
 	const string fileIn = ("ratings.txt");
-	const string fileOut = ("MovieReviews.txt");
-	ofstream fout(fileOut);
+	//const string fileOut = ("MovieReviews.txt");
+	//ofstream fout(fileOut);
 	ifstream fin(fileIn);
 	string restaurantName, numRatingsTotal;
 	int rating;
