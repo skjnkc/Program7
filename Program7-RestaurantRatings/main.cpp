@@ -25,12 +25,12 @@ void MovieStats(vector<int> a, string name, map<string, int> &restaurantRatings)
 
 int main() {
 	const string fileIn = ("ratings.txt");
-	//const string fileOut = ("MovieReviews.txt");
-	//ofstream fout(fileOut);
+	const string fileOut = ("MovieReviews.txt");
+	ofstream fout(fileOut);
 	ifstream fin(fileIn);
 	string restaurantName, numRatingsTotal;
 	int rating;
-	vector <int> charBar, JackStack, McCormick, Q39, SaharaRest;
+	vector <int> charBar, JackStack, McCormick, OliveGarden, Q39, SaharaRest;
 	map<string, int> restaurantRatings;
 	getline(fin, numRatingsTotal);
 	while (!fin.eof()) {
@@ -45,6 +45,9 @@ int main() {
 			else if (restaurantName == "McCormick") {
 				McCormick.push_back(restaurantRatings[restaurantName]);
 			}
+			else if (restaurantName == "Olive Garden") {
+				OliveGarden.push_back(restaurantRatings[restaurantName]);
+			}
 			else if (restaurantName == "Q39 BBQ") {
 				Q39.push_back(restaurantRatings[restaurantName]);
 			}
@@ -57,8 +60,10 @@ int main() {
 	MovieStats(charBar, "CharBar", restaurantRatings);
 	MovieStats(JackStack, "JackStack", restaurantRatings);
 	MovieStats(McCormick, "McCormick", restaurantRatings);
+	MovieStats(OliveGarden, "Olive Garden", restaurantRatings);
 	MovieStats(Q39, "Q39 BBQ", restaurantRatings);
 	MovieStats(SaharaRest, "Sahara Rest", restaurantRatings);
+	cout << "With a total of " << numRatingsTotal << " reviews." << endl;
 
 
 
