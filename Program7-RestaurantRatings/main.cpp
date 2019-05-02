@@ -8,6 +8,7 @@
 #include <map>
 #include <fstream>
 #include <vector>
+#include "test.h"
 using namespace std;
 
 void MovieStats(vector<int> a, string name, map<string, int> &restaurantRatings) {
@@ -24,6 +25,7 @@ void MovieStats(vector<int> a, string name, map<string, int> &restaurantRatings)
 }
 
 int main() {
+	
 	const string fileIn = ("ratings.txt");
 	const string fileOut = ("MovieReviews.txt");
 	ofstream fout(fileOut);
