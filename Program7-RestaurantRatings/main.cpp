@@ -65,7 +65,7 @@ int main() {
 	MovieStats(OliveGarden, "Olive Garden", restaurantRatings);
 	MovieStats(Q39, "Q39 BBQ", restaurantRatings);
 	MovieStats(SaharaRest, "Sahara Rest", restaurantRatings);
-	cout << "With a total of " << numRatingsTotal << " reviews." << endl;
+	cout << "For a grand total of " << numRatingsTotal << " reviews!" << endl;
 
 
 
